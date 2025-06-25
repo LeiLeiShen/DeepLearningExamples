@@ -18,7 +18,9 @@ import numpy as np
 import pytorch_lightning as pl
 import torch
 import torch.nn as nn
-from apex.optimizers import FusedAdam, FusedSGD
+from torch.optim import Adam as FusedAdam
+from torch.optim import SGD as FusedSGD
+
 from data_loading.data_module import get_data_path, get_test_fnames
 from monai.inferers import sliding_window_inference
 from monai.networks.nets import DynUNet
